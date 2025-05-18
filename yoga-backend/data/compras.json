@@ -1,0 +1,9 @@
+[
+  {
+    "id_compra": 1,
+    "id_usuario": 2,
+    "idPlan": "clase3",
+    "idCategoria": 0,
+    "precio": 25
+  }
+]

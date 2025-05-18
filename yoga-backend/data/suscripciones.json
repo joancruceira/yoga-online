@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "id_usuario": 2,
+    "fecha_inicio": "2025-05-18",
+    "plan": "clases",
+    "activo": true,
+    "clases_vistas": []
+  }
+]

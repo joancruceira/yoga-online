@@ -1,0 +1,87 @@
+[
+  {
+    "id": "clase1",
+    "categoria": "clases",
+    "titulo": "Yoga Principiantes",
+    "precio": 15,
+    "beneficios": [
+      "Clases grabadas diarias",
+      "Acceso ilimitado",
+      "Asistencia vía chat",
+      "Material de apoyo descargable"
+    ]
+  },
+  {
+    "id": "clase2",
+    "categoria": "clases",
+    "titulo": "Yoga Intermedio",
+    "precio": 20,
+    "beneficios": [
+      "Clases en vivo y grabadas",
+      "Acceso ilimitado",
+      "Foro privado con instructores",
+      "Guías de progreso semanal"
+    ]
+  },
+  {
+    "id": "clase3",
+    "categoria": "clases",
+    "titulo": "Yoga Avanzado",
+    "precio": 25,
+    "beneficios": [
+      "Clases avanzadas con maestros invitados",
+      "Clase semanal en vivo",
+      "Acceso ilimitado",
+      "Desafíos mensuales guiados"
+    ]
+  },
+  {
+    "id": "formacion1",
+    "categoria": "formacion",
+    "titulo": "Instructorado de Yoga",
+    "precio": 40,
+    "beneficios": [
+      "Clases teóricas y prácticas",
+      "Material certificado",
+      "Acceso a plataforma 24/7",
+      "Clase semanal en vivo"
+    ]
+  },
+  {
+    "id": "formacion2",
+    "categoria": "formacion",
+    "titulo": "Profesorado de Yoga",
+    "precio": 50,
+    "beneficios": [
+      "Formación intensiva completa",
+      "Tutorías personalizadas",
+      "Evaluaciones mensuales",
+      "Acceso a bolsa de trabajo",
+      "Certificado internacional"
+    ]
+  },
+  {
+    "id": "formacion3",
+    "categoria": "formacion",
+    "titulo": "Diplomado en Yoga para Niños",
+    "precio": 30,
+    "beneficios": [
+      "Clases lúdicas para niños",
+      "Material pedagógico",
+      "Sesiones prácticas grabadas",
+      "Certificado especializado"
+    ]
+  },
+  {
+    "id": "formacion4",
+    "categoria": "formacion",
+    "titulo": "Yoga en la Tercera Edad",
+    "precio": 35,
+    "beneficios": [
+      "Adaptaciones seguras y efectivas",
+      "Clases guiadas por especialistas",
+      "Apoyo familiar y seguimiento",
+      "Certificación en cuidados activos"
+    ]
+  }
+]

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saturna Yoga -  Instituto de formación - Clases</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module"  src="components/panel.js"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <header class="bg-white shadow sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
+    <div class="text-2xl font-bold text-indigo-700">Saturna Yoga</div>
+    <div class="text-sm text-gray-600">
+      Hola, <span id="nombreUsuario">Usuario</span> |
+      <a href="#" id="logout" class="text-indigo-500 hover:underline">Cerrar sesión</a>
+    </div>
+  </div>
+</header>
+
+  <main class="flex flex-col lg:flex-row max-w-7xl mx-auto mt-6 px-4">
+    <!-- Contenido principal -->
+    <section id="clases" class="flex-1 bg-white p-6 shadow-md">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800">Clases Disponibles</h2>
+
+      <!-- Video -->
+      <div class="w-full aspect-video mb-4">
+        <iframe
+          id="class-video"
+          class="w-full h-full rounded"
+          src="https://www.youtube.com/embed/kNavJY0EBbU"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- Navegación -->
+      <div class="flex justify-between mb-6">
+        <button id="prev-class" class="text-indigo-500 hover:underline invisible">Anterior</button>
+        <button id="next-class" class="text-indigo-500 hover:underline">Siguiente</button>
+      </div>
+    </section>
+
+    <!-- Lista de clases -->
+    <aside class="w-full lg:w-1/3 bg-white p-6 shadow-md lg:ml-4 mt-6 lg:mt-0">
+      <h3 class="text-lg font-semibold mb-4 text-gray-700">Lista de Clases</h3>
+      <ul id="class-list" class="space-y-2">
+        <li><button class="w-full text-left px-4 py-2 bg-indigo-100 rounded text-indigo-700" data-src="https://www.youtube.com/embed/kNavJY0EBbU">Clase 1 - Introducción</button></li>
+        <li><button class="w-full text-left px-4 py-2 hover:bg-indigo-50 rounded" data-src="https://www.youtube.com/embed/65nIwLaMsWQ">Clase 2 - Respiración</button></li>
+        <li><button class="w-full text-left px-4 py-2 hover:bg-indigo-50 rounded" data-src="https://www.youtube.com/embed/PQ6HISfby9c">Clase 3 - Posturas Básicas</button></li>
+        <li><button class="w-full text-left px-4 py-2 hover:bg-indigo-50 rounded" data-src="https://www.youtube.com/embed/4xOKSJhBF5g">Clase 4 - Secuencia Suave</button></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="bg-gray-800 text-white text-center py-4 mt-10">
+    <p>&copy; 2025 Saturna Yoga. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
