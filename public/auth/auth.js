@@ -8,9 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  const btnLogin = document.getElementById('btnLogin');
+  const formulario = document.getElementById('loginForm');
 
-  btnLogin.addEventListener('click', async () => {
+  formulario.addEventListener('submit', async (e) => {
+    e.preventDefault();
     const email = document.getElementById('email').value.trim().toLowerCase();
     const password = document.getElementById('password').value.trim();
 

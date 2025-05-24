@@ -10,6 +10,7 @@ const nextBtn = document.getElementById('next-class');
 
 let currentIndex = 0;
 
+//Toggle para la lista de botones, seleccionar video en uso y hover en los que no estan en uso
 function updateVideo(index) {
   classList.forEach((btn, i) => {
     btn.classList.toggle('bg-indigo-100', i === index);
