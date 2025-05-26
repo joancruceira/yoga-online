@@ -13,6 +13,22 @@
   </style>
 </head>
 <body class="relative min-h-screen text-white overflow-hidden">
+
+  <header class="bg-white shadow sticky top-0 z-50" >
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
+    <div class="text-2xl font-bold text-indigo-700">Saturna Yoga</div>
+    <div class="text-sm text-gray-600" id="panelUser">
+      
+      <nav id="nav" class="hidden md:flex space-x-6">
+        <a href="index.html" class="text-gray-700 hover:text-indigo-600">Inicio</a>
+        <a href="login.html" class="text-gray-700 hover:text-indigo-600">Login</a>
+        <a href="membresias.html" class="text-gray-700 hover:text-indigo-600">Membresías</a>
+        <a href="registro.html" class="text-gray-700 hover:text-indigo-600">Registrarse</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
   <!-- Fondo de video -->
   <video autoplay muted loop playsinline class="fixed top-0 left-0 w-full h-full object-cover z-0">
     <source src="./video/fondo-cielo.mp4" type="video/mp4" />
@@ -32,6 +48,6 @@
     </p>
   </div>
 
-  <script type="module" src="./components/auth.js"></script>
+  <script type="module" src="./components/auth.js" defer></script>
 </body>
 </html>

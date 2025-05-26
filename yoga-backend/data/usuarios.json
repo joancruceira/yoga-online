@@ -78,5 +78,15 @@
     "ciudad": "Rosario",
     "telefono": "34156896586",
     "membresia_activa": false
+  },
+  {
+    "id": 9,
+    "nombre": "Pablo",
+    "apellido": "Juan",
+    "email": "pablojuan@example.com",
+    "password": "hashed798",
+    "ciudad": "Rosario",
+    "telefono": "03415014595",
+    "membresia_activa": false
   }
 ]

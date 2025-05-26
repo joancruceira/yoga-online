@@ -1,75 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saturna Yoga -  Instituto de formación - Registro</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saturna Yoga - Registro</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    
-<section class="py-16 px-4 bg-white min-h-screen flex items-center justify-center">
-  <div class="max-w-md w-full bg-gray-50 p-8 rounded-2xl shadow-md">
-    <h2 class="text-3xl font-bold text-center mb-6 text-indigo-700">Crear cuenta</h2>
-    <form id="registroForm" class="space-y-4">
-      <input
-        type="text"
-        id="nombre"
-        placeholder="Nombre"
-        required
-        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-      />
-      <input
-        type="text"
-        id="apellido"
-        placeholder="Apellido"
-        required
-        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-      />
-      <input
-        type="email"
-        id="email"
-        placeholder="Correo electrónico"
-        required
-        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-      />
-      <input
-        type="password"
-        id="password"
-        placeholder="Contraseña"
-        required
-        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-      />
-      <input
-        type="text"
-        id="ciudad"
-        placeholder="Ciudad"
-        required
-        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-      />
-      <input
-        type="tel"
-        id="telefono"
-        placeholder="Teléfono"
-        required
-        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-      />
 
-      <input
-        type="button"
-        value="Registrarse"
-        class="w-full bg-indigo-600 text-white font-semibold py-2 rounded-lg hover:bg-indigo-700 transition duration-200 cursor-pointer"
-        id="registrar"
-      />
-    </form>
-    <p class="text-center text-sm text-gray-500 mt-4">
-      ¿Ya tenés cuenta? <a href="login.html" class="text-indigo-600 hover:underline">Iniciar sesión</a>
-    </p>
+
+
+<body class="relative min-h-screen overflow-hidden">
+  
+<header class="bg-white shadow sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
+    <div class="text-2xl font-bold text-indigo-700">Saturna Yoga</div>
+    <div class="text-sm text-gray-600">
+      
+      <nav id="nav" class="hidden md:flex space-x-6">
+        <a href="membresias.html" class="text-gray-700 hover:text-indigo-600">Membresías</a>
+        <a href="login.html" class="text-gray-700 hover:text-indigo-600">Ingresar</a>
+        <a href="registro.html" class="text-gray-700 hover:text-indigo-600">Registrarse</a>
+      </nav>
+    </div>
   </div>
-</section>
+</header>
 
+  <!-- Fondo de video -->
+  <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0">
+    <source src="./video/fondo-registro.mp4" type="video/mp4" />
+    Tu navegador no soporta video HTML5.
+  </video>
 
+  <!-- Capa de oscurecimiento (opcional) -->
+  <div class="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
 
-<script src="./components/registro.js" type="module" ></script>
+  <!-- Contenido principal -->
+  <section class="relative z-20 flex items-center justify-center min-h-screen p-4">
+    <div class="max-w-md w-full bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-md">
+      <h2 class="text-3xl font-bold text-center mb-6 text-indigo-700">Crear cuenta</h2>
+      <form id="registroForm" class="space-y-4">
+        <input type="text" id="nombre" placeholder="Nombre" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        <input type="text" id="apellido" placeholder="Apellido" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        <input type="email" id="email" placeholder="Correo electrónico" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        <input type="password" id="password" placeholder="Contraseña" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        <input type="text" id="ciudad" placeholder="Ciudad" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        <input type="tel" id="telefono" placeholder="Teléfono" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        <input type="button" value="Registrarse" class="w-full bg-indigo-600 text-white font-semibold py-2 rounded-lg hover:bg-indigo-700 transition duration-200 cursor-pointer" id="registrar" />
+      </form>
+      <p class="text-center text-sm text-gray-500 mt-4">
+        ¿Ya tenés cuenta? <a href="login.html" class="text-indigo-600 hover:underline">Iniciar sesión</a>
+      </p>
+    </div>
+  </section>
+
+  <script src="./components/registro.js" type="module"></script>
 </body>
 </html>

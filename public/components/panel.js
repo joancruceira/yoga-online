@@ -1,7 +1,4 @@
-import {
-  obtenerUsuario,
-  eliminarUsuario
-} from './localStorage.js';
+
 
 const classList = document.querySelectorAll('#class-list button');
 const video = document.getElementById('class-video');
@@ -37,23 +34,3 @@ nextBtn.addEventListener('click', () => {
   if (currentIndex < classList.length - 1) updateVideo(currentIndex + 1);
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const nombreSpan = document.getElementById('nombreUsuario');
-  const logoutLink = document.getElementById('logout');
-
-  const usuario = obtenerUsuario();
-
-  if (!usuario) {
-    // Redirige si no hay sesión activa
-    window.location.href = 'index.html';
-    return;
-  }
-
-  nombreSpan.textContent = usuario.nombre || 'Usuario';
-
-  logoutLink.addEventListener('click', (e) => {
-    e.preventDefault(); // Evita que recargue la página
-    eliminarUsuario();
-    window.location.href = 'index.html';
-  });
-});

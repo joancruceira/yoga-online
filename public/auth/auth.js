@@ -10,6 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const formulario = document.getElementById('loginForm');
 
+  if(!usuario){
+    panelUser.innerHTML=`<nav id="nav" class="hidden md:flex space-x-6">
+        <a href="index.html" class="text-gray-700 hover:text-indigo-600">Inicio</a>
+        <a href="login.html" class="text-gray-700 hover:text-indigo-600">Login</a>
+        <a href="membresias.html" class="text-gray-700 hover:text-indigo-600">Membresías</a>
+        <a href="registro.html" class="text-gray-700 hover:text-indigo-600">Registrarse</a>
+      </nav>`;
+  }
+
   formulario.addEventListener('submit', async (e) => {
     e.preventDefault();
     const email = document.getElementById('email').value.trim().toLowerCase();

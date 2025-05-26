@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Saturna Yoga</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="./components/header.js" defer></script>
   
   <script>
     tailwind.config = {
@@ -26,15 +27,16 @@
         </button>
       </div>
       <nav id="nav" class="hidden md:flex space-x-6">
-        <a href="#membresias" class="text-gray-700 hover:text-indigo-600">Membresías</a>
-        <a href="#login" class="text-gray-700 hover:text-indigo-600">Ingresar</a>
-        <a href="#registro" class="text-gray-700 hover:text-indigo-600">Registrarse</a>
+        <a href="index.html" class="text-gray-700 hover:text-indigo-600">Inicio</a>
+        <a href="login.html" class="text-gray-700 hover:text-indigo-600">Login</a>
+        <a href="membresias.html" class="text-gray-700 hover:text-indigo-600">Membresías</a>
+        <a href="registro.html" class="text-gray-700 hover:text-indigo-600">Registrarse</a>
       </nav>
     </div>
     <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
-      <a href="#membresias" class="block text-gray-700 py-2 hover:text-indigo-600">Membresías</a>
-      <a href="#login" class="block text-gray-700 py-2 hover:text-indigo-600">Ingresar</a>
-      <a href="#registro" class="block text-gray-700 py-2 hover:text-indigo-600">Registrarse</a>
+      <a href="membresias.html" class="block text-gray-700 py-2 hover:text-indigo-600">Membresías</a>
+      <a href="login.html" class="block text-gray-700 py-2 hover:text-indigo-600">Ingresar</a>
+      <a href="registro.html" class="block text-gray-700 py-2 hover:text-indigo-600">Registrarse</a>
     </div>
   </header>
 
@@ -87,11 +89,9 @@
 
   <section id="registro" class="py-12 px-4 bg-gray-50">
     <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">Registrarse</h2>
-    <form action="#" method="post" class="max-w-md mx-auto bg-white p-6 rounded shadow">
-      <input type="text" placeholder="Nombre completo" required class="w-full mb-4 px-4 py-2 border rounded" />
-      <input type="email" placeholder="Correo electrónico" required class="w-full mb-4 px-4 py-2 border rounded" />
-      <input type="password" placeholder="Contraseña" required class="w-full mb-4 px-4 py-2 border rounded" />
-      <input type="submit" value="Crear cuenta" class="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 cursor-pointer" />
+    <form class="max-w-md mx-auto bg-white p-6 rounded shadow">
+      
+      <input type="button" value="Crear cuenta" class="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 cursor-pointer" id="btnRegistro" />
     </form>
   </section>
 

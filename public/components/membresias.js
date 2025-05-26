@@ -1,4 +1,7 @@
 import { realizarCompra } from "./comprar.js";
+import { obtenerUsuario } from './localStorage.js';
+
+const usuario = obtenerUsuario();
 
 document.addEventListener('DOMContentLoaded', () => {
   const btnClases = document.getElementById('btnClases');
@@ -11,6 +14,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const cerrarModal = document.getElementById('cerrarModal');
   const resumen = document.getElementById('resumenProducto');
   const formCompra = document.getElementById('formCompra');
+
+  let panelUser=document.querySelector("#panelUser");
+
+  if(!usuario){
+    panelUser.innerHTML=`<nav id="nav" class="hidden md:flex space-x-6">
+        <a href="index.html" class="text-gray-700 hover:text-indigo-600">Inicio</a>
+        <a href="login.html" class="text-gray-700 hover:text-indigo-600">Login</a>
+        <a href="membresias.html" class="text-gray-700 hover:text-indigo-600">Membresías</a>
+        <a href="registro.html" class="text-gray-700 hover:text-indigo-600">Registrarse</a>
+      </nav>`;
+  }
 
   let suscripcionSeleccionada = null;
 
@@ -27,26 +41,36 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function renderCards(lista, categoria) {
-    panel.classList.remove('hidden');
-    titulo.textContent = categoria.charAt(0).toUpperCase() + categoria.slice(1);
-    contenedor.innerHTML = '';
+  panel.classList.remove('hidden');
+  titulo.textContent = categoria.charAt(0).toUpperCase() + categoria.slice(1);
+  contenedor.innerHTML = '';
 
-    lista.forEach(item => {
-      const card = document.createElement('div');
-      card.className = 'bg-white/90 backdrop-blur text-gray-800 p-6 rounded-2xl shadow-md';
-      card.innerHTML = `
-        <h4 class="text-xl font-bold text-indigo-700 mb-2">${item.titulo}</h4>
-        <p class="text-gray-600 mb-4">€${item.precio} / mes</p>
-        <ul class="list-disc list-inside text-sm text-gray-700 mb-4 space-y-1">
-          ${item.beneficios.map(b => `<li>${b}</li>`).join('')}
-        </ul>
-        <button class="bg-indigo-600 text-white w-full py-2 rounded hover:bg-indigo-700 transition" data-id="${item.id}">Seleccionar</button>
-      `;
-      const btn = card.querySelector('button');
-      btn.addEventListener('click', () => abrirModal(item));
-      contenedor.appendChild(card);
+  lista.forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'bg-white/90 backdrop-blur text-gray-800 p-6 rounded-2xl shadow-md';
+    card.innerHTML = `
+      <h4 class="text-xl font-bold text-indigo-700 mb-2">${item.titulo}</h4>
+      <p class="text-gray-600 mb-4">€${item.precio} / mes</p>
+      <ul class="list-disc list-inside text-sm text-gray-700 mb-4 space-y-1">
+        ${item.beneficios.map(b => `<li>${b}</li>`).join('')}
+      </ul>
+      <button class="bg-indigo-600 text-white w-full py-2 rounded hover:bg-indigo-700 transition" data-id="${item.id}">Seleccionar</button>
+    `;
+    const btn = card.querySelector('button');
+
+    btn.addEventListener('click', () => {
+      const usuario = obtenerUsuario();
+      if (!usuario) {
+        window.location.href = './registro.html';
+      } else {
+        abrirModal(item);
+      }
     });
-  }
+
+    contenedor.appendChild(card);
+  });
+}
+  
 
   function abrirModal(producto) {
     suscripcionSeleccionada = producto;

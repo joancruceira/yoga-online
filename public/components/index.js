@@ -5,6 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
   redirigirSiLogueado();
 });
 
+let btnRegistro=document.querySelector("#btnRegistro"); 
+
+btnRegistro.addEventListener("click", (e)=>{
+  window.location.href = 'registro.html'
+
+});
+
 /*const botonMas = document.getElementById('Mas');
 const contenedorData = document.getElementById('Data');
 
