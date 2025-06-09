@@ -12,18 +12,28 @@
 <body class="relative min-h-screen overflow-hidden">
   
 <header class="bg-white shadow sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
-    <div class="text-2xl font-bold text-indigo-700">Saturna Yoga</div>
-    <div class="text-sm text-gray-600">
-      
-      <nav id="nav" class="hidden md:flex space-x-6">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
+      <div class="text-2xl font-bold text-indigo-700">Saturna Yoga</div>
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <nav id="nav" class="hidden md:flex space-x-6 panelUser">
+        <a href="index.html" class="text-gray-700 hover:text-indigo-600">Inicio</a>
+        <a href="login.html" class="text-gray-700 hover:text-indigo-600">Login</a>
         <a href="membresias.html" class="text-gray-700 hover:text-indigo-600">Membresías</a>
-        <a href="login.html" class="text-gray-700 hover:text-indigo-600">Ingresar</a>
         <a href="registro.html" class="text-gray-700 hover:text-indigo-600">Registrarse</a>
       </nav>
     </div>
-  </div>
-</header>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+      <a href="membresias.html" class="block text-gray-700 py-2 hover:text-indigo-600">Membresías</a>
+      <a href="login.html" class="block text-gray-700 py-2 hover:text-indigo-600">Ingresar</a>
+      <a href="registro.html" class="block text-gray-700 py-2 hover:text-indigo-600">Registrarse</a>
+    </div>
+  </header>
 
   <!-- Fondo de video -->
   <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0">

@@ -1,92 +1,22 @@
 [
   {
     "id": 1,
-    "nombre": "Lucía",
-    "apellido": "Fernández",
-    "email": "lucia@example.com",
-    "password": "hashed123",
-    "membresia_activa": false,
-    "ciudad": "Buenos Aires",
-    "telefono": "+54 911 2345 6789"
-  },
-  {
-    "id": 2,
-    "nombre": "Mateo",
-    "apellido": "Lopez",
-    "email": "mateo@example.com",
-    "password": "hashed456",
-    "membresia_activa": true,
-    "ciudad": "Córdoba",
-    "telefono": "+54 911 3456 7890"
-  },
-  {
-    "id": 3,
-    "nombre": "Sofía",
-    "apellido": "Martínez",
-    "email": "sofia@example.com",
-    "password": "hashed789",
-    "membresia_activa": false,
+    "nombre": "Paula",
+    "apellido": "Perez",
+    "email": "ejemplo@ejemplo.com",
+    "password": "$2b$08$K7i4HRgmXsKXHpNcma1u2ePehDcogxA84UpJhQX.iR2CihXAvk3MO",
     "ciudad": "Rosario",
-    "telefono": "+54 911 9876 5432"
-  },
-  {
-    "id": 4,
-    "nombre": "Tomás",
-    "apellido": "Gómez",
-    "email": "tomas@example.com",
-    "password": "hashedabc",
-    "membresia_activa": false,
-    "ciudad": "Mendoza",
-    "telefono": "+54 911 1111 2222"
-  },
-  {
-    "id": 5,
-    "nombre": "Valentina",
-    "apellido": "Pérez",
-    "email": "valentina@example.com",
-    "password": "hasheddef",
-    "membresia_activa": false,
-    "ciudad": "La Plata",
-    "telefono": "+54 911 3333 4444"
-  },
-  {
-    "id": 6,
-    "nombre": "Julián",
-    "apellido": "Ramírez",
-    "email": "julian@example.com",
-    "password": "hashedghi",
-    "membresia_activa": false,
-    "ciudad": "Salta",
-    "telefono": "+54 911 5555 6666"
-  },
-  {
-    "id": 7,
-    "nombre": "Camila",
-    "apellido": "Silva",
-    "email": "camila@example.com",
-    "password": "hashedjkl",
-    "membresia_activa": false,
-    "ciudad": "Neuquén",
-    "telefono": "+54 911 7777 8888"
-  },
-  {
-    "id": 8,
-    "nombre": "Pedro",
-    "apellido": "Sanchez",
-    "email": "pedro@example.com",
-    "password": "hashed467",
-    "ciudad": "Rosario",
-    "telefono": "34156896586",
+    "telefono": "341568986",
     "membresia_activa": false
   },
   {
-    "id": 9,
-    "nombre": "Pablo",
-    "apellido": "Juan",
-    "email": "pablojuan@example.com",
-    "password": "hashed798",
+    "id": 2,
+    "nombre": "Carlos",
+    "apellido": "Crivelli",
+    "email": "ejemplo2@ejemplo2.com",
+    "password": "$2b$08$UZMVdSuaa2UmcKMvs.C0Wu4nGEpY5WTrd0kkuxfVgWK6EhSUyrNsq",
     "ciudad": "Rosario",
-    "telefono": "03415014595",
+    "telefono": "341568987",
     "membresia_activa": false
   }
 ]

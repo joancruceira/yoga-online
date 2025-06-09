@@ -16,13 +16,21 @@ export async function realizarCompra(producto) {
   };
 
   try {
-    const res = await fetch('http://localhost:3000/user/compra', {
+    const res = await fetch('http://localhost:3000/compra/compra', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
       body: JSON.stringify(datosCompra)
     });
 
-    const data = await res.json();
+    let data;
+
+    try{
+      data=await res.json();
+    }catch (e){ console.error('Error al parsear JSON: ', e)
+      alert('Respuesta inválida del servidor');
+      return;
+    }
 
     if (res.ok) {
       alert('¡Compra realizada con éxito!');

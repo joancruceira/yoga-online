@@ -1,9 +1,7 @@
 import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import { getPaths } from './paths.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const { __dirname, __filename } = getPaths(import.meta.url);
 
 function generarId(lista, campo = 'id') {
   if (!Array.isArray(lista) || lista.length === 0) return 1;

@@ -20,6 +20,7 @@ export function tieneMembresiaActiva() {
   return usuario?.membresia_activa === true;
 }
 
+/*
 export function redirigirSiLogueado() {
   const usuario = obtenerUsuario();
   if (usuario?.membresia_activa) {
@@ -27,4 +28,4 @@ export function redirigirSiLogueado() {
   } else if (usuario) {
     window.location.href = 'membresias.html';
   }
-}
+}*/
