@@ -30,6 +30,7 @@ export function obtenerUsuario(email){
 export function guardarUsuario(nuevoUsuario) {
   try {
     const usuarios = obtenerUsuarios();
+    
     usuarios.push(nuevoUsuario);
     fs.writeFileSync(filePath, JSON.stringify(usuarios, null, 2), "utf-8");
     return true;
@@ -42,4 +43,10 @@ export function guardarUsuario(nuevoUsuario) {
 export function existe(email) {
   const usuarios = obtenerUsuarios();
   return usuarios.some((u) => u.email.toLowerCase() === email.toLowerCase());
+}
+
+export function generarID(nuevoUsuario){
+  const id=usuarios.length > 0 ? usuarios[usuarios.length - 1].id + 1 : 1;
+
+  return id;
 }
