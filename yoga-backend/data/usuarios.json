@@ -7,7 +7,7 @@
     "password": "$2b$08$K7i4HRgmXsKXHpNcma1u2ePehDcogxA84UpJhQX.iR2CihXAvk3MO",
     "ciudad": "Rosario",
     "telefono": "341568986",
-    "membresia_activa": false
+    "membresia_activa": true
   },
   {
     "id": 2,

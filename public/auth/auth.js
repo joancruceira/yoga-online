@@ -17,11 +17,12 @@ import { guardarUsuario } from '../components/localStorage.js';
     }
  
     try {
-      const res = await fetch('http://localhost:3000/user/login', {
+      const res = await fetch('/user/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
-        body: JSON.stringify({ email, password })
+        body: JSON.stringify({ email, password }),
+        credentials: 'include'
+        
       });
 
       const data = await res.json();
@@ -29,7 +30,7 @@ import { guardarUsuario } from '../components/localStorage.js';
       if (res.ok) {
         const usuario = data.user;
         guardarUsuario(usuario); // reemplaza setItem
-
+   
         if (usuario.membresia_activa) {
           window.location.href = 'clases.html';
         } else {

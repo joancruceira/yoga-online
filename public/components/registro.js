@@ -18,14 +18,17 @@ document.addEventListener('DOMContentLoaded', () => {
       nombre: document.getElementById('nombre').value.trim(),
       apellido: document.getElementById('apellido').value.trim(),
       email: document.getElementById('email').value.trim().toLowerCase(),
+      fechaNacimiento : document.getElementById('fecha_nacimiento').value,
       password: document.getElementById('password').value,
       ciudad: document.getElementById('ciudad').value.trim(),
+      provincia: document.getElementById('provincia').value.trim(),
+      pais: document.getElementById('pais').value.trim(),
       telefono: document.getElementById('telefono').value.trim(),
       membresia_activa: false
     };
 
     try {
-      const res = await fetch('http://localhost:3000/user/register', {
+      const res = await fetch('http://localhost:4000/user/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(nuevoUsuario)

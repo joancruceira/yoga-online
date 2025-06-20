@@ -1,6 +1,4 @@
-import { obtenerUsuario } from './userServices.js';
-import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
+import { registrarUsuario } from '../db/actions/usuario.action.js';
 
 export const loguearse = (req, res) => {
   
@@ -29,6 +27,8 @@ if (!usuario) {
   //Creo el token 
   const token = jwt.sign(
     {
+      id: usuario.id,
+      nombre: usuario.nombre,
       email: usuario.email,
       membresia_activa: usuario.membresia_activa
     },
@@ -40,7 +40,7 @@ if (!usuario) {
   res.cookie('token', token, {
   httpOnly: true,
   secure: process.env.NODE_ENV === 'production', // Esto debería dar false en desarrollo
-  sameSite: 'Lax',
+  sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax',
   maxAge: 24 * 60 * 60 * 1000
 });
 

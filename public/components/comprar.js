@@ -1,22 +1,24 @@
-import { obtenerUsuario, guardarUsuario } from './localStorage.js';
+import { getUsuarioDesdeCookie } from './userServices.js';
 
 export async function realizarCompra(producto) {
-  const usuario = obtenerUsuario();
+  const usuario = getUsuarioDesdeCookie();
 
   if (!usuario || !producto) {
     alert('Falta información del usuario o del producto.');
     return;
   }
 
+
+
   const datosCompra = {
-    id_usuario: usuario.id,
+    
     plan: producto.id,
     categoria: producto.categoria,
     precio: producto.precio
   };
 
   try {
-    const res = await fetch('http://localhost:3000/compra/compra', {
+    const res = await fetch('/compra', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
@@ -34,7 +36,6 @@ export async function realizarCompra(producto) {
 
     if (res.ok) {
       alert('¡Compra realizada con éxito!');
-      guardarUsuario({ ...usuario, membresia_activa: true });
       window.location.href = 'clases.html';
     } else {
       alert(data.message || 'No se pudo procesar la compra');

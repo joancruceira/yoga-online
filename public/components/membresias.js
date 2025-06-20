@@ -1,9 +1,15 @@
 import { realizarCompra } from "./comprar.js";
-import { obtenerUsuario } from './localStorage.js';
+import { getUsuarioDesdeCookie } from "./userServices.js";
 
-const usuario = obtenerUsuario();
 
-document.addEventListener('DOMContentLoaded', () => {
+ 
+document.addEventListener('DOMContentLoaded', async () => {
+  
+
+
+const usuario = await getUsuarioDesdeCookie();
+console.log(usuario);
+
   const btnClases = document.getElementById('btnClases');
   const btnFormacion = document.getElementById('btnFormacion');
   const panel = document.getElementById('panelMembresias');
@@ -14,17 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const cerrarModal = document.getElementById('cerrarModal');
   const resumen = document.getElementById('resumenProducto');
   const formCompra = document.getElementById('formCompra');
-
-  let panelUser=document.querySelector("#panelUser");
-
-  if(!usuario){
-    panelUser.innerHTML=`<nav id="nav" class="hidden md:flex space-x-6">
-        <a href="index.html" class="text-gray-700 hover:text-indigo-600">Inicio</a>
-        <a href="login.html" class="text-gray-700 hover:text-indigo-600">Login</a>
-        <a href="membresias.html" class="text-gray-700 hover:text-indigo-600">Membresías</a>
-        <a href="registro.html" class="text-gray-700 hover:text-indigo-600">Registrarse</a>
-      </nav>`;
-  }
 
   let suscripcionSeleccionada = null;
 
@@ -59,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btn = card.querySelector('button');
 
     btn.addEventListener('click', () => {
-      const usuario = obtenerUsuario();
+      
       if (!usuario) {
         window.location.href = './registro.html';
       } else {

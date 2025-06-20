@@ -1,5 +1,6 @@
 import fs from 'fs';
 import { getPaths } from './paths.js';
+import path from 'path';
 
 const { __dirname, __filename } = getPaths(import.meta.url);
 
@@ -10,8 +11,9 @@ function generarId(lista, campo = 'id') {
 }
 
 export const procesarCompra = (req, res) => {
-  const { id_usuario, plan, categoria, precio } = req.body;
-
+  const { plan, categoria, precio } = req.body;
+  const id_usuario = req.user?.id;
+  console.log("req.user:", req.user);
   console.log("Datos recibidos para procesar compra:", req.body);
 
   const parsedPrecio = Number(precio);

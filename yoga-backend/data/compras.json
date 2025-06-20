@@ -5,5 +5,12 @@
     "idPlan": "clase3",
     "idCategoria": 0,
     "precio": 25
+  },
+  {
+    "id_compra": 2,
+    "id_usuario": 1,
+    "idPlan": "formacion1",
+    "idCategoria": 1,
+    "precio": 40
   }
 ]
